@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgeInDays</title>
+</head>
+<style>
+    *{
+        text-align: center;
+    }
+    .container{
+        border: 1px solid black;
+        
+    }
+    .btn-box{
+        border: 1px solid red;
+        border-radius: 8px;
+        color: white;
+        
+    }
+    .click{
+        background-color: green;
+        color: white;
+        cursor: pointer;
+    }
+    .reseet{
+        background-color: red;
+        color: white;
+        cursor: pointer;
+    }
+    .flex-box-container-1{
+        border: 1px solid red;
+        height: 70px;
+        width: 100%;
+    }
+    #flex-box-result{
+        display: flex;
+        justify-content: center;
+        border: 1px solid blue;
+        height: auto;
+        width: auto;
+        align-items: center;
+    }
+   
+</style>
+
+<body>
+    <div class="container">
+        <h1 class="main">Challenge 1: Your age in days</h1>
+        <div class="btn-box">
+            <button class="click" onclick="ageindays()">Click</button>
+            <button class="reseet">Reset</button>
+        </div>
+        <div class="flex-box-container-1">
+            <div id="flex-box-result">
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function ageindays(){
+        var birthyear = prompt('what year were you born');
+        var ageindays = (2020-birthyear)*365;
+        var h1 = document.createElement('h1');
+        var textanswer = document.createTextNode('You are ' + ageindays + ' days old');
+        h1.setAttribute('id','ageindayss');
+        h1.appendChild(textanswer);
+        document.getElementById('flex-box-result').appendChild(h1);
+    
+    }
+</script>
+</html>
